@@ -72,5 +72,5 @@ END
     main_menu.command 'Hard Linebreak'
   end
 end
-smart_typing_pairs['text.html.markdown'] = ['"', '"', '(', ')', '{', '}', '[', ']', 'Ò', 'Ó', '`', '`', '_', '_', '<', '>']
-smart_typing_pairs['text.html.markdown markup.raw, text.html.markdown meta.link'] = ['"', '"', '(', ')', '{', '}', '[', ']', 'Ò', 'Ó', '`', '`']
+smart_typing_pairs['text.html.markdown'] = ['"', '"', '(', ')', '{', '}', '[', ']', '`', '`', '_', '_', '<', '>']
+smart_typing_pairs['text.html.markdown markup.raw, text.html.markdown meta.link'] = ['"', '"', '(', ')', '{', '}', '[', ']', '`', '`']
