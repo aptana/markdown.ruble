@@ -196,15 +196,15 @@ children:
   scope: null
 - !!com.aptana.scripting.model.SmartTypingPairsElement
   customProperties: null
-  displayName: smart_typing_pairs-ffc4bd16-4683-4f21-8779-ffa2acbaf9fc
+  displayName: smart_typing_pairs-1b57c866-c142-47d8-ad91-95e4a9f32ae2
   pairs: [&id002 '"', *id002, &id005 (, &id006 ), &id007 '{', &id008 '}', &id009 '[',
-    &id010 ']', �, �, &id003 '`', *id003, &id004 _, *id004, <, '>']
+    &id010 ']', &id003 '`', *id003, &id004 _, *id004, <, '>']
   path: bundle.rb
   scope: text.html.markdown
 - !!com.aptana.scripting.model.SmartTypingPairsElement
   customProperties: null
-  displayName: smart_typing_pairs-4a2cb1b6-f94e-43c6-bbb1-6471ffed1ab2
-  pairs: [*id002, *id002, *id005, *id006, *id007, *id008, *id009, *id010, �, �, *id003,
+  displayName: smart_typing_pairs-66a9f8fa-d455-4241-b64d-d444f677438f
+  pairs: [*id002, *id002, *id005, *id006, *id007, *id008, *id009, *id010, *id003,
     *id003]
   path: bundle.rb
   scope: text.html.markdown markup.raw, text.html.markdown meta.link
