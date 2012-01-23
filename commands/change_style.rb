@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Change Style' do |cmd|
+command t(:change_style) do |cmd|
   cmd.key_binding = 'M4+*'
   cmd.scope = 'text.html.markdown markup.list'
   cmd.output = :replace_selection

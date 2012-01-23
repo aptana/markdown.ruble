@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Convert Document / Selection to PDF' do |cmd|
+command t(:convert_to_pdf) do |cmd|
   cmd.scope = 'text.html.markdown.multimarkdown'
   cmd.output = :show_as_html
   cmd.input = :selection, :document

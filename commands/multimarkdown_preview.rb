@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Preview' do |cmd|
+command t(:preview) do |cmd|
   cmd.key_binding = 'M4+M3+M1+P'
   cmd.scope = 'text.html.markdown.multimarkdown'
   cmd.output = :show_as_html

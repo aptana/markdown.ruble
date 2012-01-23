@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Select Item' do |cmd|
+command t(:select_item) do |cmd|
   cmd.key_binding = 'M1+NUMPAD_ENTER'
   cmd.scope = 'text.html.markdown markup.list'
   cmd.output = :insert_as_snippet

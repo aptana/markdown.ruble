@@ -4,7 +4,7 @@ def esc(str)
   e_sn(str).gsub(/\}/, '\\}') # escaping inside a placeholder
 end
     
-command 'Italic' do |cmd|
+command t(:italic) do |cmd|
   cmd.key_binding = 'M1+I'
   cmd.scope = 'text.html.markdown -meta.disable-markdown'
   cmd.output = :insert_as_snippet

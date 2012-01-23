@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Reformat' do |cmd|
+command t(:reformat) do |cmd|
   cmd.key_binding = 'M4+{'
   cmd.scope = 'text.html.markdown markup.list'
   cmd.output = :replace_selection

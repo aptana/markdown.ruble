@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'New Item' do |cmd|
+command t(:new_item) do |cmd|
   cmd.key_binding = 'NUMPAD_ENTER'
   cmd.scope = 'text.html.markdown markup.list'
   cmd.output = :insert_as_snippet

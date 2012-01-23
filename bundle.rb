@@ -1,14 +1,15 @@
 require 'ruble'
 
-bundle 'Markdown' do |bundle|
+bundle do |bundle|
+  bundle.display_name = t(:bundle_name)
   bundle.author = 'Michael Sheets'
   bundle.contact_email_rot_13 = 'zfurrgf@juvgrsnyyf.bet'
-  bundle.description =  <<END
-<a href="http://daringfireball.net/projects/markdown/">Markdown</a> allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML. This bundle provides preview functionality, syntax highlighting, and several useful commands.
-END
+  bundle.description = '<a href="http://daringfireball.net/projects/markdown/">Markdown</a> allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML. This bundle provides preview functionality, syntax highlighting, and several useful commands.'
+  
   increase_indent = /^.*(\{[^}"']*|\([^)"']*)$/
   decrease_indent = /^(.*\*\/)?\s*\}[;\s]*$/
   bundle.indent['markup.raw.block.markdown'] = increase_indent, decrease_indent
+  
   start_folding = /(?x)
 		(<(?i:head|body|table|thead|tbody|tfoot|tr|div|select|fieldset|style|script|ul|ol|form|dl)\b.*?>
 		|<!--(?!.*-->)
@@ -20,6 +21,7 @@ END
 		|(^|\s)\}
 		)/
   bundle.folding['text.html.markdown'] = start_folding, end_folding
+  
   start_folding = /(?x)
 		(<(?i:head|body|table|thead|tbody|tfoot|tr|div|select|fieldset|style|script|ul|ol|form|dl)\b.*?>
 		|<!--(?!.*-->)
@@ -33,43 +35,43 @@ END
   bundle.folding['text.html.markdown.multimarkdown'] = start_folding, end_folding
   bundle.file_types['text.html.markdown'] = '*.mdown', '*.markdown', '*.markdn', '*.md'
 
-  bundle.menu 'Markdown' do |main_menu|
-    main_menu.command 'Preview'
-    main_menu.command 'Convert Document / Selection to HTML'
-    main_menu.command 'Syntax Cheat Sheet'
+  bundle.menu t(:bundle_name) do |main_menu|
+    main_menu.command t(:preview)
+    main_menu.command t(:convert_to_html)
+    main_menu.command t(:syntax_cheat_sheet)
     main_menu.separator
-    main_menu.menu 'MultiMarkdown' do |submenu|
-      submenu.command 'Preview'
-      submenu.command 'Generate Output and Open in Browser'
+    main_menu.menu t(:multi_markdown) do |submenu|
+      submenu.command t(:preview)
+      submenu.command t(:generate_and_open_in_browser)
       submenu.separator
-      submenu.command 'Convert Document / Selection to HTML'
-      submenu.command 'Convert Document / Selection to LaTeX'
-      submenu.command 'Convert Document / Selection to LaTeX (Memoir)'
-      submenu.command 'Convert Document / Selection to PDF'
-      submenu.command 'Convert Document / Selection to RTF'
+      submenu.command t(:convert_to_html)
+      submenu.command t(:convert_to_latex)
+      submenu.command t(:convert_to_latex_memoir)
+      submenu.command t(:convert_to_pdf)
+      submenu.command t(:convert_to_rtf)
     end
     main_menu.separator
-    main_menu.menu 'Format' do |submenu|
-      submenu.command 'Bold'
-      submenu.command 'Italic'
+    main_menu.menu t(:format) do |submenu|
+      submenu.command t(:bold)
+      submenu.command t(:italic)
     end
     main_menu.separator
-    main_menu.menu 'Headings' do |submenu|
-      submenu.command 'Level 1 [setext]'
-      submenu.command 'Level 2 [setext]'
+    main_menu.menu t(:headings) do |submenu|
+      submenu.command t(:level_1)
+      submenu.command t(:level_2)
     end
-    main_menu.menu 'Lists' do |submenu|
-      submenu.command 'New Item'
-      submenu.command 'New Subitem'
+    main_menu.menu t(:lists) do |submenu|
+      submenu.command t(:new_item)
+      submenu.command t(:new_subitem)
       submenu.separator
 #      submenu.command '2E75B4D8-E6E8-4E3C-969D-FFC650092A39'
-      submenu.command 'Select Item'
+      submenu.command t(:select_item)
       submenu.separator
-      submenu.command 'Reformat'
-      submenu.command 'Change Style'
+      submenu.command t(:reformat)
+      submenu.command t(:change_style)
     end
     main_menu.separator
-    main_menu.command 'Hard Linebreak'
+    main_menu.command t(:hard_linebreak)
   end
 end
 smart_typing_pairs['text.html.markdown'] = ['"', '"', '(', ')', '{', '}', '[', ']', '`', '`', '_', '_', '<', '>']

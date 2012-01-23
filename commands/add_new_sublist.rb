@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'New Subitem' do |cmd|
+command t(:new_subitem) do |cmd|
   cmd.key_binding = 'M2+NUMPAD_ENTER'
   cmd.scope = 'text.html.markdown markup.list'
   cmd.output = :insert_as_snippet

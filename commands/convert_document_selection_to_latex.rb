@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Convert Document / Selection to LaTeX' do |cmd|
+command t(:convert_to_latex) do |cmd|
   cmd.scope = 'text.html.markdown.multimarkdown'
   cmd.output = :create_new_document
   cmd.input = :selection, :document

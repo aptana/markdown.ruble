@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Generate Output and Open in Browser' do |cmd|
+command t(:generate_and_open_in_browser) do |cmd|
   cmd.key_binding = 'M4+M1+P'
   cmd.scope = 'text.html.markdown.multimarkdown'
   cmd.output = :discard

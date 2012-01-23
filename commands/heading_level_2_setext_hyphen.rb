@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Level 2 [setext]' do |cmd|
+command t(:level_2) do |cmd|
   cmd.scope = 'text.html.markdown'
   cmd.trigger = '-'
   cmd.output = :insert_as_text

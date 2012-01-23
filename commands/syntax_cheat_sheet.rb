@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Syntax Cheat Sheet' do |cmd|
+command t(:syntax_cheat_sheet) do |cmd|
   cmd.key_binding = 'M4+H'
   cmd.scope = 'text.html.markdown'
   cmd.output = :show_as_html

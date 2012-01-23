@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Convert Document / Selection to RTF' do |cmd|
+command t(:convert_to_rtf) do |cmd|
   cmd.scope = 'text.html.markdown.multimarkdown'
   cmd.output = :discard
   cmd.input = :selection, :document
